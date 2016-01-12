@@ -8,12 +8,12 @@ fi
 
 if [ ! "${NODE_VERSION}" ];
 then
-    NODE_VERSION=stable
+    NODE_VERSION=0.12.7
 fi
 
 if [ ! "${NPM_VERSION}" ];
 then
-    NPM_VERSION=latest
+    NPM_VERSION=2.11.3
 fi
 
 echo "Installing version ${NVM_VERSION} of nvm"

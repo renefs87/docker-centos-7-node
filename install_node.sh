@@ -8,12 +8,12 @@ fi
 
 if [ ! "${NODE_VERSION}" ];
 then
-    NODE_VERSION=0.12.7
+    NODE_VERSION="0.12.7"
 fi
 
 if [ ! "${NPM_VERSION}" ];
 then
-    NPM_VERSION=2.11.3
+    NPM_VERSION="2.11.3"
 fi
 
 echo "Installing version ${NVM_VERSION} of nvm"
@@ -25,7 +25,7 @@ echo "Installing version ${NODE_VERSION} of node"
 nvm install ${NODE_VERSION}
 
 echo "Setting default node for nvm"
-nvm alias default stable
+nvm alias default 0.12.7
 
 echo "Installing version ${NPM_VERSION} of npm"
 npm -g install npm@${NPM_VERSION}

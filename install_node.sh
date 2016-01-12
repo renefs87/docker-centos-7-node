@@ -21,6 +21,9 @@ curl -s -o- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/inst
 
 source ~/.bashrc
 
+echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
+echo "source ~/.nvm/nvm.sh" >> ~/.bash_profile
+
 echo "Installing version ${NODE_VERSION} of node"
 nvm install ${NODE_VERSION}
 
@@ -38,3 +41,9 @@ node --version
 
 echo -n "npm --version: "
 npm --version
+
+npm install -g ember-cli
+
+npm install -g bower
+
+npm install -g phantomjs

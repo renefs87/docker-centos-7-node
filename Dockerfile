@@ -1,4 +1,4 @@
-FROM centos:7
+FROM cern/cc7-base
 MAINTAINER Lloyd Benson <lloyd.benson@gmail.com>
 RUN yum -y update
 RUN yum -y install epel-release git sudo make gcc gcc-c++

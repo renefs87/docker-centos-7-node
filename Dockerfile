@@ -6,11 +6,11 @@ RUN useradd docker
 # To avoid tty error on scripts
 # To add docker user
 RUN sed -i -e "s/Defaults    requiretty.*/ #Defaults    requiretty/g" /etc/sudoers
-RUN echo "docker ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-ADD install_node.sh /home/docker/install_node.sh
-ADD install_emberjs.sh /home/docker/install_emberjs.sh
-USER docker
-WORKDIR /home/docker
+#RUN echo "docker ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+ADD install_node.sh /home/root/install_node.sh
+ADD install_emberjs.sh /home/root/install_emberjs.sh
+USER root
+WORKDIR /home/root
 RUN ls
 RUN ./install_node.sh
 RUN ./install_emberjs.sh

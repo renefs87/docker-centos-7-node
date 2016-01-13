@@ -2,7 +2,9 @@ FROM cern/cc7-base
 RUN yum -y update
 RUN yum -y install epel-release git sudo make gcc gcc-c++ tar curl bzip2 wget
 RUN useradd docker
+# Edit sudoers file
 # To avoid tty error on scripts
+# To add docker user
 RUN sed -i -e "s/Defaults    requiretty.*/ #Defaults    requiretty/g" /etc/sudoers
 RUN echo "docker ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 ADD install_node.sh /home/docker/install_node.sh

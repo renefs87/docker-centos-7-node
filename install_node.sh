@@ -12,5 +12,6 @@ node --version
 
 echo -n "npm --version: "
 npm --version
-
+# Fix npm permissions
+sudo chown -R $(whoami) ~/.npm
 sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
